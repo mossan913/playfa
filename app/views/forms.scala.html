@@ -1,0 +1,14 @@
+@(msg: String, form1: Form[FormsController.SampleForm])
+
+@main("Forms Test") {
+	<h1>Forms Test</h1>
+	<p>@msg</p>
+	@helper.form(action = routes.FormsController.send){
+		@helper.CSRF.formField
+		@(helper.inputText (
+			field = form1("message")
+		))
+
+	<input type="submit">
+	}
+}
