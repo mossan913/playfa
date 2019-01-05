@@ -1,0 +1,12 @@
+@()
+
+@main("jpadb sample page") {
+  <h1>jpadb sample page</h1>
+  <ul id="organizations"></ul>
+
+    <form method="POST" action="@routes.JpaDBController.addOrganization">
+        @helper.CSRF.formField
+        <input type="text" name="name"/>
+        <button>Add Organization</button>
+    </form>
+}
