@@ -1,0 +1,16 @@
+@(title: String, topics: Array[String])
+
+@makelist(itemlist:Array[String])={
+	<ul>
+	@for(item <- itemlist){
+		<li>@item</li>
+	}
+	</ul>
+}
+
+@viewtest_main(title){
+	<h1>@(title+"です。")</h1>
+	@makelist(topics)
+	@makelist(topics)
+  <a href="@routes.HomeController.index">戻る</a>
+}
