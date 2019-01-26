@@ -4,7 +4,11 @@
 @main("この戦いの向こうに、答えはあるのか。") {
   <h1>Pray for Answer</h1>
   <p>***@now***</p>
+  <h2>Twirlテンプレートのテスト</h2>
   <p><a href="@routes.ViewTestController.index">ViewTest</a></p>
   <p><a href="@routes.ViewTestController.twoArgs">Two Args</a></p>
   <p><a href="@routes.ViewTestController.forLoop">For Loop</a></p>
+  <h2>いろいろなルーティング</h2>
+  <p><a href="@routes.RoutingTestController.simple("ゲスト")">Simple routing, "ゲスト"</a></p>
+  <p><a href="@routes.RoutingTestController.showData(0)">ViewTestData, 今のトピック</a></p>
 }

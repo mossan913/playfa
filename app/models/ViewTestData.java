@@ -14,4 +14,13 @@ public class ViewTestData {
 		return topics;
 	}
 
+	public String getTopic(Integer index) {
+		String[] topics = getTopics();
+		// 最小、最大チェック。NGはindex:0を返す。
+		if(index < 0 || topics.length <= index) {
+			return topics[0];
+		}
+		return topics[index];
+	}
+
 }
