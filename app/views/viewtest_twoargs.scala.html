@@ -1,0 +1,10 @@
+@(title: String, rnum: Int)
+
+@viewtest_main(title){
+	<h1>@(title+"です。")</h1>
+	<p>乱数 @rnum 。</p>
+	@if(rnum%3==2){
+	<p>3で割って2余る。</p>
+	}
+  <a href="@routes.HomeController.index">戻る</a>
+}
