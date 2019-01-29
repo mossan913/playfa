@@ -1,0 +1,13 @@
+@(result: Book)
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>書籍の検索</title>
+	</head>
+	<body>
+		<p>@(result.year + "年：" + result.author + "作：「" + result.title + "」あるかも。")</p>
+		<p>他を当たる：<a href="@routes.BookFormController.showForm">入力規則なし</a>｜<a href="@routes.BookValController.showForm">入力規則あり</a></p>
+		<p><a href="@routes.HomeController.index">戻る</a></p>
+	</body>
+</html>

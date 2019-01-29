@@ -1,0 +1,21 @@
+@(result: Room)
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>部屋の予約の確認</title>
+	</head>
+	<body>
+		<h1>予約確認</h1>
+		<table>
+			<tr><td>部屋名：</td><td>@result.name</td></tr>
+			<tr><td>使用日時：</td><td>@result.date</td></tr>
+			<tr><td>使用目的：</td><td>@result.use</td></tr>
+		</table>
+		<p>
+			@if(result.member){優待会員は50‰オフ！}else{この機会に入会しませんか？}
+		</p>
+		<p><a href="@routes.RoomController.showForm">予約に戻る</a></p>
+		<p><a href="@routes.HomeController.index">戻る</a></p>
+	</body>
+</html>

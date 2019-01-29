@@ -1,0 +1,13 @@
+@(result: String)
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>最も簡単なフォームの送信結果</title>
+	</head>
+	<body>
+		<p>@result が送信されました</p>
+		<p><a href="@routes.SimpleFormController.showForm">フォームへ戻る</a></p>
+		<p><a href="@routes.HomeController.index">戻る</a></p>
+	</body>
+</html>
