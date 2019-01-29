@@ -1,0 +1,16 @@
+@(simpleform: Form[String])
+@import helper._
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>最も簡単なフォーム</title>
+	</head>
+	<body>
+	@form(routes.SimpleFormController.process()){
+	@CSRF.formField
+		@inputText(field=simpleform("name"))
+		<button>送信</button>
+	}
+	</body>
+</html>

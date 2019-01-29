@@ -1,0 +1,39 @@
+@(roomform: Form[RoomData])
+@import helper._
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>いろいろなコントローラ</title>
+	</head>
+	<body>
+	@form(routes.RoomController.process()){
+	@CSRF.formField
+		@* プルダウン *@
+		@select(
+			roomform("name"),
+			options = Seq(
+				"つばき" -> "つばき",
+				"あかね" -> "あかね",
+				"こんぶ" -> "こんぶ"
+			),
+			'_label -> "部屋名"
+		)
+		@* 日付型テキスト・フィールド *@
+		@inputDate(roomform("date"), '_label -> "使用日時")
+		@* ラジオボタン *@
+		@inputRadioGroup(
+			roomform("use"),
+			options = Seq(
+				"会議" -> "会議",
+				"研修" -> "研修",
+				"パーティー" -> "パーティー"
+			),
+			'_label -> "使用目的"
+		)
+		@* チェックボックス *@
+		@checkbox(roomform("member"), '_label -> "優待会員")
+		<button>送信</button>
+	}
+	</body>
+</html>

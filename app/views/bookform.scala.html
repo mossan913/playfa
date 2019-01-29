@@ -1,0 +1,18 @@
+@(bookform: Form[BookData])
+@import helper._
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>複数のデータを送信</title>
+	</head>
+	<body>
+	@form(routes.BookFormController.process()){
+	@CSRF.formField
+		@inputText(bookform("title"), 'size->50, '_label->"題名")
+		@inputText(bookform("author"),'size->30, '_label->"著者")
+		@inputText(bookform("year"),  'size->20, '_label->"発表年")
+		<button>送信</button>
+	}
+	</body>
+</html>

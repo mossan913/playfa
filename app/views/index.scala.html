@@ -5,10 +5,33 @@
   <h1>Pray for Answer</h1>
   <p>***@now***</p>
   <h2>Twirlテンプレートのテスト</h2>
-  <p><a href="@routes.ViewTestController.index">ViewTest</a></p>
-  <p><a href="@routes.ViewTestController.twoArgs">Two Args</a></p>
-  <p><a href="@routes.ViewTestController.forLoop">For Loop</a></p>
+  <table>
+    <tr>
+      <td><a href="@routes.ViewTestController.index">ViewTest</a></td>
+      <td><a href="@routes.ViewTestController.twoArgs">Two Args</a></td>
+      <td><a href="@routes.ViewTestController.forLoop">For Loop</a></td>
+    </tr>
+  </table>
+
   <h2>いろいろなルーティング</h2>
-  <p><a href="@routes.RoutingTestController.simple("ゲスト")">Simple routing, "ゲスト"</a></p>
-  <p><a href="@routes.RoutingTestController.showData(0)">ViewTestData, 今のトピック</a></p>
+  <table>
+    <tr>
+      <td><a href="@routes.RoutingTestController.simple("ゲスト")">Simple routing, "ゲスト"</a></td>
+      <td><a href="@routes.RoutingTestController.showData(0)">ViewTestData, 今のトピック</a></td>
+    </tr>
+  </table>
+
+  <h2>フォームによるデータ送信</h2>
+  <table>
+    <tr>
+      <td><a href="@routes.SimpleFormController.showForm">最も簡単なフォーム</a></td>
+    </tr>
+    <tr>
+      <td><a href="@routes.BookFormController.showForm">複数データ送信・入力規則なし</a></td>
+      <td><a href="@routes.BookValController.showForm">複数データ送信・入力規則あり</a></td>
+    </tr>
+    <tr>
+      <td><a href="@routes.RoomController.showForm">いろいろなコントローラ</a></td>
+    </tr>
+  </table>
 }
