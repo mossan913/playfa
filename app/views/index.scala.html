@@ -34,4 +34,21 @@
       <td><a href="@routes.RoomController.showForm">いろいろなコントローラ</a></td>
     </tr>
   </table>
+
+  <h2>非同期のテスト</h2>
+  <table>
+    <tr>
+      <td><a href="@routes.AsyncController.goAsync(1)">1秒</a></td>
+      <td><a href="@routes.AsyncController.goAsync(5)">5秒</a></td>
+      <td><a href="@routes.AsyncController.goAsync(10)">10秒</a></td>
+    </tr>
+  </table>
+
+  <h2>オブジェクト←→JSON</h2>
+  <table>
+    <tr>
+      <td><a href="@routes.BookJsonController.bToJ">BookObject to JSON</a></td>
+      <td><a href="@routes.BookJsonController.jToB">JSON to BookObject</a></td>
+    </tr>
+  </table>
 }
